@@ -1,0 +1,85 @@
+%YAML:1.0
+
+#common parameters
+savePath: "/home/instellar/Documents/Codes/CamLaserCalibraTool/log/"
+bag_path: "/home/instellar/Documents/Codes/CamLaserCalibraTool/bag/2021-04-21-10-07-24.bag"
+
+scan_topic_name: "/scan"
+img_topic_name: "/usb_cam/image_raw"
+infra_img_topic_name: "/usb_cam_infrared/image_raw"
+infrared_calibration: 0
+
+# tag info
+tag_type: 1 # 1: kalibr_tag, 2: apriltag
+tag_size: 0.03 # tag size, unit meter
+tag_spacing: 0.3 # tag spacing, only used in kalibr_tag. For details, please see kalibr tag description.
+black_border: 2 # if you use kalibr_tag black_boarder = 2; if you use apriltag black_boarder = 1
+
+
+# tag_type: 2 # 1: kalibr_tag, 2: apriltag
+# tag_size: 0.086 # tag size, unit meter
+# tag_spacing: 0.3 # tag spacing, only used in kalibr_tag. For details, please see kalibr tag description.
+# black_border: 1 # if you use kalibr_tag black_boarder = 2; if you use apriltag black_boarder = 1
+ 
+# #camera calibration 
+# model_type: KANNALA_BRANDT
+# camera_name: camera
+# image_width: 640
+# image_height: 480
+
+# projection_parameters:
+#    mu: 199.6218305573563
+#    mv: 199.66071030865186
+#    u0: 310.30446851278043
+#    v0: 209.51232165516032
+#    k2: 0.6155993559183067
+#    k3: 0.08547201092624512
+#    k4: -0.45802628674526896
+#    k5: 0.2000795601333037
+
+#camera calibration 
+model_type: PINHOLE
+camera_name: camera
+image_width: 640
+image_height: 480
+
+
+# camera on board
+distortion_parameters:
+   k1: 0.15077545 
+   k2: -0.14857954  
+   p1: -0.00132582 
+   p2: -0.00232246
+
+projection_parameters:
+   fx: 429.27251298  
+   fy: 428.07205284  
+   cx: 327.50622268  
+   cy: 248.44501491
+
+# 0.13578196 -0.13246297  0.00224793  0.00280024
+# 421.46337933  421.13067275  340.90103264  259.14781913
+# distortion_parameters:
+#    k1: 0.13578196  
+#    k2: -0.13246297  
+#    p1: 0.00224793
+#    p2: 0.00280024
+
+# projection_parameters:
+#    fx: 421.46337933
+#    fy: 421.13067275  
+#    cx: 340.90103264  
+#    cy: 259.14781913
+
+# for infrared camera
+# distortion_parameters:
+#    k1: -0.5035604     
+#    k2:  0.31044239 
+#    p1: -0.00333103   
+#    p2: -0.00472581 
+
+# projection_parameters:
+#    fx: 684.99514747   
+#    fy: 688.42738149        
+#    cx: 320.51916567  
+#    cy: 255.89291574 
