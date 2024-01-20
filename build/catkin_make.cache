@@ -1,0 +1,2 @@
+.
+-DCATKIN_DEVEL_PREFIX=/home/instellar/Documents/Codes/CamLaserCalibraTool/devel -DCMAKE_INSTALL_PREFIX=/home/instellar/Documents/Codes/CamLaserCalibraTool/install -G Unix Makefiles

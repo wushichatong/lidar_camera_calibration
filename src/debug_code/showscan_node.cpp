@@ -12,17 +12,18 @@
 #include <Eigen/Core>
 
 #include "opencv2/opencv.hpp"
-#include "opencv/cxeigen.hpp"
-
+#include "opencv2/core/eigen.hpp"
+// #include "opencv/cxeigen.hpp"
+#include <opencv2/videoio.hpp>
 #include "../camera_models/include/EquidistantCamera.h"
 #include "../camera_models/include/PinholeCamera.h"
 
 cv::Mat cv_T_;
 CameraPtr cameraptr_;
 cv::VideoWriter writer = cv::VideoWriter("/home/instellar/Desktop/projection_video.mp4",
-		CV_FOURCC('X', 'V', 'I', 'D'), 25, cv::Size(640,480));
+		cv::VideoWriter::fourcc('X', 'V', 'I', 'D'), 25, cv::Size(640,480));
 cv::VideoWriter infra_writer = cv::VideoWriter("/home/instellar/Desktop/infra_video.mp4",
-		CV_FOURCC('M', 'J', 'P', 'G'), 25, cv::Size(640,480));
+		cv::VideoWriter::fourcc('M', 'J', 'P', 'G'), 25, cv::Size(640,480));
 namespace sc
 {
 
